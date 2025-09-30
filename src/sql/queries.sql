@@ -6,10 +6,12 @@ SELECT * FROM observations;
 
 -- MISSION 1;
 SELECT *FROM observations
-LIMIT 10
+LIMIT 10;
 
--- MISSION 2
--- Your query here;
+-- MISSION 2 ;
+--¿Qué identificadores de región (region_id) aparecen en los datos?;
+--Usa SELECT DISTINCT para evitar repeticiones.;
+SELECT DISTINCT region_id FROM observations;
 
 
 -- MISSION 3
