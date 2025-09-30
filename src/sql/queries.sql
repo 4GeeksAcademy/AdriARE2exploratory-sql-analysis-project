@@ -31,6 +31,10 @@ SELECT COUNT (*) FROM observations WHERE observation_date = "1998-08-08";
 
 --6) ¿Cuál es el region_id con más observaciones?;
 -- Agrupa por región y cuenta cuántas veces aparece cada una;
+SELECT region_id, COUNT(*) AS total_observations
+FROM observations
+GROUP BY region_id
+ORDER BY total_observations DESC;
 
 --7) ¿Cuáles son los 5 species_id más frecuentes?;
 -- Agrupa, ordena por cantidad descendente y limita el resultado;
