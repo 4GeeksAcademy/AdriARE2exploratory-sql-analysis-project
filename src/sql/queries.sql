@@ -71,17 +71,11 @@ ORDER BY total_observations DESC;
 
 -- 10) Muestra el nombre de la región (regions.name) para cada observación;
 -- Relaciona observations con regions usando region_id;
-SELECT o.id, o.observer, r.name AS region_name
-FROM observations o
-INNER JOIN regions r
-ON o.region_id = r.id;
-
-
-SELECT * FROM observations
-INNER JOIN regions
-ON region_id = id;
-
-
+SELECT observations.id, observations.species_id, observations.region_id, regions.name 
+    AS region_name, observations.observer, observations.observation_date
+FROM observations
+JOIN regions 
+    ON observations.region_id = regions.id;
 
 
 -- 11) Muestra el nombre científico de cada especie registrada (species.scientific_name);
