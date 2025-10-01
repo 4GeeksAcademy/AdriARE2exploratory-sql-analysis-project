@@ -86,6 +86,10 @@ JOIN species
     ON observations.species_id = species.id;
 
 
-
 -- 12) ¿Cuál es la especie más observada por cada región?;
 -- Agrupa por región y especie, y ordena por cantidad;
+SELECT region_id, species_id, COUNT(*) AS total_observations
+FROM observations
+GROUP BY region_id, species_id
+ORDER BY region_id, total_observations DESC;
+
