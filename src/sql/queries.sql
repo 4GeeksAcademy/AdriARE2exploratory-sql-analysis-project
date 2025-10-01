@@ -80,6 +80,12 @@ JOIN regions
 
 -- 11) Muestra el nombre científico de cada especie registrada (species.scientific_name);
 -- Relaciona observations con species usando species_id;
+SELECT species.scientific_name, observations.observer
+FROM observations
+JOIN species
+    ON observations.species_id = species.id;
+
+
 
 -- 12) ¿Cuál es la especie más observada por cada región?;
 -- Agrupa por región y especie, y ordena por cantidad;
